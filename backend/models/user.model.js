@@ -25,16 +25,6 @@ const UserSchema = new mongoose.Schema({
 		default: Date.now,
 	},
 
-	weightInfo: {
-		weight: {
-			type: [Number],
-			required: true,
-		},
-		date: {
-			type: Date,
-			required: true,
-		},
-	},
 });
 
 const User = mongoose.model('User', UserSchema);

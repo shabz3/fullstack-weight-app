@@ -1,6 +1,5 @@
 import express from 'express';
 import passport from 'passport';
-import User from '../models/user.model';
 
 const CLIENT_HOME_PAGE_URL = 'http://localhost:3000';
 

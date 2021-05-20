@@ -10,13 +10,12 @@ const AddWeight = () => {
 	const [weight, setWeight] = useState();
 	const [date, setDate] = useState(null);
 	const isInitialMount = useRef(true);
-	const { id } = useParams();
 
 	useEffect(() => {
 		if (isInitialMount.current) {
 			isInitialMount.current = false;
 		} else {
-			if (weight !== null && Number.isFinite(weight)) {
+			if (weight !== null) {
 				axios.post('http://localhost:5002/weight/add', { weight, date }).then((res) => console.log(res.data));
 			}
 		}
